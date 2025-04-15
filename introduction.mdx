@@ -1,71 +1,138 @@
 ---
-title: Introduction
-description: 'Welcome to the home of your new documentation'
+title: LeadRun
+description: 'Gelişmiş X Lead Generation ve Pazarlama Platformu'
 ---
 
 <img
   className="block dark:hidden"
   src="/images/hero-light.svg"
-  alt="Hero Light"
+  alt="LeadRun Hero Light"
 />
 <img
   className="hidden dark:block"
   src="/images/hero-dark.svg"
-  alt="Hero Dark"
+  alt="LeadRun Hero Dark"
 />
 
-## Setting up
+## LeadRun Nedir?
 
-The first step to world-class documentation is setting up your editing environments.
-
-<CardGroup cols={2}>
-  <Card
-    title="Edit Your Docs"
-    icon="pen-to-square"
-    href="https://mintlify.com/docs/quickstart"
-  >
-    Get your docs set up locally for easy development
-  </Card>
-  <Card
-    title="Preview Changes"
-    icon="image"
-    href="https://mintlify.com/docs/development"
-  >
-    Preview your changes before you push to make sure they're perfect
-  </Card>
-</CardGroup>
-
-## Make it yours
-
-Update your docs to your brand and add valuable content for the best user conversion.
+LeadRun, Twitter'da (X) lead generation için gelişmiş yapay zeka destekli anahtar kelime üretimi sağlayan ve sosyal medya pazarlama stratejilerinizi optimize etmenize yardımcı olan bir platformdur.
 
 <CardGroup cols={2}>
   <Card
-    title="Customize Style"
-    icon="palette"
-    href="https://mintlify.com/docs/settings/global"
+    title="Anahtar Kelime Üretimi"
+    icon="key"
+    href="/features/keyword-generation"
   >
-    Customize your docs to your company's colors and brands
+    Yapay zeka destekli, şirketinize özel 60 benzersiz anahtar kelime üretimi
   </Card>
   <Card
-    title="Reference APIs"
-    icon="code"
-    href="https://mintlify.com/docs/api-playground/openapi"
+    title="Tweet Arama ve Analiz"
+    icon="magnifying-glass"
+    href="/features/tweet-search"
   >
-    Automatically generate endpoints from an OpenAPI spec
+    Anahtar kelimelerinizle ilgili tweet'leri bulma ve analiz etme
   </Card>
   <Card
-    title="Add Components"
-    icon="screwdriver-wrench"
-    href="https://mintlify.com/docs/components/accordion"
+    title="Uyumluluk Analizi"
+    icon="chart-line"
+    href="/features/compatibility-analysis"
   >
-    Build interactive features and designs to guide your users
+    Tweet'lerin şirketiniz ve hedef kitleniz için uyumluluğunu analiz etme
   </Card>
   <Card
-    title="Get Inspiration"
-    icon="stars"
-    href="https://mintlify.com/customers"
+    title="Tweet Yanıtlama"
+    icon="reply"
+    href="/features/response-generation"
   >
-    Check out our showcase of our favorite documentation
+    Yapay zeka destekli profesyonel yanıt önerileri oluşturma
   </Card>
 </CardGroup>
+
+## Teknoloji Altyapısı
+
+LeadRun, modern web teknolojileri kullanılarak geliştirilmiş bir full-stack uygulamadır:
+
+### Frontend
+- **Next.js 15**: React tabanlı modern web framework
+- **TypeScript**: Tip güvenliği sağlayan JavaScript süper kümesi
+- **Tailwind CSS**: Hızlı UI geliştirme için utility-first CSS framework
+- **Clerk**: Güvenli kimlik doğrulama ve kullanıcı yönetimi
+- **Radix UI**: Erişilebilir ve özelleştirilebilir UI bileşenleri
+- **Sonner**: Bildirim sistemi
+
+### Backend
+- **Next.js API Routes**: Frontend ile entegre API endpoint'leri
+- **FastAPI**: Python tabanlı yüksek performanslı API framework'ü
+- **MongoDB**: NoSQL veritabanı çözümü
+- **OpenRouter API**: Yapay zeka modellerine erişim (Grok-2, Claude vb.)
+- **Brave Search API**: Twitter içerik araması için API
+- **RapidAPI**: Alternatif Twitter arama API'si
+
+### DevOps
+- **Vercel**: Frontend deployment ve hosting
+- **Railway**: Backend deployment ve hosting
+
+## Sistem Mimarisi
+
+LeadRun, frontend ve backend olmak üzere iki ana bileşenden oluşur:
+
+1. **Frontend (Next.js)**: Kullanıcı arayüzü ve client-side işlevsellik
+2. **Backend (FastAPI)**: Yapay zeka entegrasyonları ve veri işleme
+
+Bu iki bileşen arasındaki iletişim, Next.js API Routes üzerinden gerçekleştirilir. Kullanıcı verileri ve uygulama durumu MongoDB'de saklanır.
+
+## Başlangıç
+
+LeadRun'ı kullanmaya başlamak için aşağıdaki adımları izleyebilirsiniz:
+
+<Steps>
+  <Step title="Kurulum">
+    [Kurulum talimatlarını](/getting-started/installation) takip edin
+  </Step>
+  <Step title="Yapılandırma">
+    [Yapılandırma kılavuzunu](/getting-started/configuration) kullanarak API anahtarlarınızı ayarlayın
+  </Step>
+  <Step title="İlk Kullanım">
+    [Hızlı başlangıç kılavuzunu](/getting-started/quickstart) takip ederek ilk anahtar kelimelerinizi oluşturun
+  </Step>
+</Steps>
+
+## Önemli Entegrasyonlar
+
+LeadRun, çeşitli API ve servislerle entegre çalışır:
+
+<CardGroup cols={3}>
+  <Card
+    title="Stripe Ödemeleri"
+    icon="credit-card"
+    href="/integrations/stripe-payments"
+  >
+    Güvenli ödeme işlemleri ve abonelik yönetimi
+  </Card>
+  <Card
+    title="RapidAPI Twitter"
+    icon="hashtag"
+    href="/integrations/rapidapi-twitter"
+  >
+    Twitter içerik araması için alternatif API
+  </Card>
+  <Card
+    title="OpenRouter LLM"
+    icon="robot"
+    href="/integrations/openrouter-llm"
+  >
+    Yapay zeka modellerine erişim (Grok-2, Claude vb.)
+  </Card>
+</CardGroup>
+
+## Geliştirme Süreci
+
+LeadRun, modern yazılım geliştirme pratikleri kullanılarak oluşturulmuştur:
+
+- **Component-Based Architecture**: Yeniden kullanılabilir UI bileşenleri
+- **API-First Development**: Backend ve frontend arasında net API sözleşmeleri
+- **Type Safety**: TypeScript ile tip güvenliği
+- **Responsive Design**: Tüm cihazlarda optimum kullanıcı deneyimi
+
+Geliştirme sürecinde [Windsurf IDE ve Claude 3.7](/development/windsurf-claude) kullanılmıştır.

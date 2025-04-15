@@ -1,0 +1,166 @@
+---
+title: 'Anahtar Kelime Üretimi'
+description: 'Yapay zeka destekli anahtar kelime üretimi ve analizi'
+icon: 'key'
+---
+
+# Anahtar Kelime Üretimi
+
+LeadRun'ın en temel özelliklerinden biri, yapay zeka destekli anahtar kelime üretimidir. Bu özellik, şirketinize özel, yüksek kaliteli anahtar kelimeler üreterek Twitter'da (X) lead generation sürecinizi optimize etmenize yardımcı olur.
+
+## Özellikler
+
+<CardGroup cols={2}>
+  <Card title="Yapay Zeka Destekli" icon="robot" color="#4F46E5">
+    OpenRouter API ve Grok-2 modeli kullanılarak şirketinize özel, yüksek kaliteli anahtar kelimeler üretme
+  </Card>
+  <Card title="60 Benzersiz Anahtar Kelime" icon="hashtag" color="#4F46E5">
+    Her sorguda tam olarak 60 adet benzersiz anahtar kelime üretilir
+  </Card>
+  <Card title="Detaylı Metrikler" icon="chart-line" color="#4F46E5">
+    Her anahtar kelime için arama hacmi, rekabet, tıklama başına maliyet ve dönüşüm potansiyeli gibi metrikler
+  </Card>
+  <Card title="Özelleştirilebilir Girdiler" icon="sliders" color="#4F46E5">
+    Şirket bilgileri, sektör, ürünler/hizmetler, hedef kitle ve rakip bilgilerine göre özelleştirilmiş anahtar kelimeler
+  </Card>
+</CardGroup>
+
+## Nasıl Çalışır?
+
+<Steps>
+  <Step title="Şirket Bilgilerini Girme">
+    Anahtar kelime üretimi için şirket bilgilerini girin:
+    
+    - **Şirket Adı**: Şirketinizin adı
+    - **Sektör**: Şirketinizin faaliyet gösterdiği sektör
+    - **Ürünler/Hizmetler**: Şirketinizin sunduğu ürün veya hizmetler
+    - **Hedef Kitle**: Hedeflediğiniz müşteri profili
+    - **Rakipler** (opsiyonel): Rakip şirketlerin adları
+    
+    <Tip>
+      Daha spesifik ve detaylı bilgiler girmeniz, daha alakalı anahtar kelimeler üretilmesini sağlar.
+    </Tip>
+  </Step>
+  
+  <Step title="Yapay Zeka İşlemi">
+    Girdiğiniz bilgiler, OpenRouter API üzerinden Grok-2 modeline gönderilir. Model, bu bilgileri analiz ederek şirketinize ve hedef kitlenize uygun anahtar kelimeler üretir.
+    
+    <Note>
+      Yapay zeka modeli, şirketinizin sektörü, ürünleri/hizmetleri ve hedef kitlesi hakkında kapsamlı bir anlayış geliştirerek, potansiyel müşterilerinizin Twitter'da kullanabileceği anahtar kelimeleri tahmin eder.
+    </Note>
+  </Step>
+  
+  <Step title="Anahtar Kelime Üretimi">
+    Model, tam olarak 60 adet benzersiz anahtar kelime üretir. Bu anahtar kelimeler:
+    
+    - Şirketinizin sektörüne uygun
+    - Hedef kitlenizin ilgi alanlarıyla alakalı
+    - Lead generation potansiyeli yüksek
+    - Birbirinden farklı ve çeşitli
+    
+    <Warning>
+      Üretilen anahtar kelimeler, modelin eğitim verilerine ve algoritmasına bağlıdır. Her zaman üretilen anahtar kelimeleri gözden geçirin ve işinize uygun olmayanları filtrelemek için kendi değerlendirmenizi yapın.
+    </Warning>
+  </Step>
+  
+  <Step title="Metrik Hesaplama">
+    Her anahtar kelime için aşağıdaki metrikler hesaplanır:
+    
+    - **Arama Hacmi**: Tahmini aylık arama sayısı (0-100)
+    - **Rekabet**: Rekabet seviyesi (0-100)
+    - **Tıklama Başına Maliyet**: Tahmini reklam maliyeti (0-100)
+    - **Dönüşüm Potansiyeli**: Tahmini dönüşüm oranı (0-100)
+    
+    <Note>
+      Bu metrikler, yapay zeka modeli tarafından tahmin edilir ve gerçek değerlerden farklılık gösterebilir. Genel bir fikir vermek için kullanılmalıdır.
+    </Note>
+  </Step>
+  
+  <Step title="Veritabanına Kaydetme">
+    Üretilen anahtar kelimeler ve ilgili metrikler, MongoDB'ye kaydedilir. Her anahtar kelime koleksiyonu:
+    
+    - Benzersiz bir ID
+    - Oluşturulma tarihi ve saati
+    - Kullanıcı ID'si
+    - Şirket bilgileri
+    - Anahtar kelimeler listesi
+    
+    ile saklanır ve daha sonra tweet arama ve analiz işlemleri için kullanılabilir.
+  </Step>
+</Steps>
+
+## Anahtar Kelime Koleksiyonları
+
+Üretilen anahtar kelimeler, "koleksiyonlar" halinde organize edilir. Her koleksiyon:
+
+- Oluşturulma tarihine göre sıralanır (en yeniler en üstte)
+- 60 adet benzersiz anahtar kelime içerir
+- Şirket bilgilerinize göre özelleştirilmiştir
+
+Koleksiyonlar, dashboard'da listelenir ve istediğiniz zaman erişebilirsiniz.
+
+## Örnek Anahtar Kelime Üretimi
+
+<Accordion title="Örnek Şirket Bilgileri">
+  **Şirket Adı**: EcoFresh Organik Gıda  
+  **Sektör**: Organik gıda perakendeciliği  
+  **Ürünler/Hizmetler**: Organik meyve, sebze, tahıl, süt ürünleri, et ürünleri, hazır yemekler  
+  **Hedef Kitle**: Sağlıklı beslenmeye önem veren, 25-45 yaş arası, orta-üst gelir seviyesine sahip, şehirde yaşayan bireyler ve aileler  
+  **Rakipler**: Doğal Market, Organica, Bio Dünya
+</Accordion>
+
+<Accordion title="Üretilen Anahtar Kelimeler (Örnek)">
+  1. organik gıda fiyatları
+  2. sağlıklı beslenme önerileri
+  3. pestisitsiz sebzeler
+  4. organik sertifikalı ürünler
+  5. glütensiz organik ürünler
+  6. sürdürülebilir tarım
+  7. organik bebek maması
+  8. yerel çiftçi ürünleri
+  9. organik et nereden alınır
+  10. doğal koruyucusuz gıdalar
+  11. ...ve 50 adet daha
+</Accordion>
+
+## Anahtar Kelime Optimizasyonu
+
+Üretilen anahtar kelimeleri daha etkili kullanmak için:
+
+1. **Önceliklendirme**: Anahtar kelimeleri metriklerine göre sıralayın ve en yüksek potansiyele sahip olanları önceliklendirin
+2. **Gruplama**: Benzer anahtar kelimeleri gruplandırarak daha odaklı tweet aramaları yapın
+3. **Test Etme**: Farklı anahtar kelime koleksiyonları oluşturarak hangilerinin daha iyi sonuç verdiğini test edin
+4. **Güncelleme**: Düzenli olarak yeni anahtar kelime koleksiyonları oluşturarak güncel trendleri yakalayın
+
+## Teknik Detaylar
+
+Anahtar kelime üretimi, aşağıdaki teknolojiler kullanılarak gerçekleştirilir:
+
+- **Frontend**: Next.js ve TypeScript
+- **Backend**: Next.js API Routes ve FastAPI
+- **Yapay Zeka**: OpenRouter API üzerinden Grok-2 modeli
+- **Veritabanı**: MongoDB
+
+<Accordion title="API İsteği Örneği">
+  ```json
+  {
+    "model": "xai/grok-2",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Sen bir anahtar kelime üretme uzmanısın. Verilen şirket bilgilerine göre Twitter'da lead generation için kullanılabilecek 60 adet benzersiz anahtar kelime üreteceksin."
+      },
+      {
+        "role": "user",
+        "content": "Şirket Adı: EcoFresh Organik Gıda\nSektör: Organik gıda perakendeciliği\nÜrünler/Hizmetler: Organik meyve, sebze, tahıl, süt ürünleri, et ürünleri, hazır yemekler\nHedef Kitle: Sağlıklı beslenmeye önem veren, 25-45 yaş arası, orta-üst gelir seviyesine sahip, şehirde yaşayan bireyler ve aileler\nRakipler: Doğal Market, Organica, Bio Dünya"
+      }
+    ],
+    "temperature": 0.7,
+    "max_tokens": 2000
+  }
+  ```
+</Accordion>
+
+## Sonraki Adımlar
+
+Anahtar kelimelerinizi ürettikten sonra, [Tweet Arama ve Analiz](/features/tweet-search) özelliğini kullanarak bu anahtar kelimelerle ilgili tweet'leri bulabilir ve analiz edebilirsiniz.

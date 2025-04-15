@@ -1,29 +1,29 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "LeadRun Docs",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#4F46E5",
+    "light": "#818CF8",
+    "dark": "#3730A3",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+      "from": "#4F46E5",
+      "to": "#818CF8"
     }
   },
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:support@leadrun.com"
     }
   ],
   "topbarCtaButton": {
     "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "url": "https://app.leadrun.com"
   },
   "tabs": [
     {
@@ -35,57 +35,86 @@
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
+      "url": "introduction"
     },
     {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "API",
+      "icon": "code",
+      "url": "api-reference"
     }
   ],
   "navigation": [
     {
-      "group": "Get Started",
+      "group": "Introduction",
+      "pages": ["introduction"]
+    },
+    {
+      "group": "Getting Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
+        "getting-started/installation", 
+        "getting-started/quickstart", 
+        "getting-started/configuration"
       ]
     },
     {
-      "group": "Essentials",
+      "group": "Features",
       "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "features/keyword-generation",
+        "features/tweet-search",
+        "features/compatibility-analysis",
+        "features/response-generation"
       ]
     },
     {
-      "group": "API Documentation",
+      "group": "Technical Documentation",
       "pages": [
-        "api-reference/introduction"
+        "technical/architecture",
+        "technical/data-models",
+        "technical/api-integrations",
+        "technical/database"
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Integrations",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/delete"
+        "integrations/stripe-payments",
+        "integrations/rapidapi-twitter",
+        "integrations/openrouter-llm"
+      ]
+    },
+    {
+      "group": "Deployment",
+      "pages": [
+        "deployment/railway-nextjs",
+        "deployment/railway-n8n"
+      ]
+    },
+    {
+      "group": "Database",
+      "pages": [
+        "database/mongodb-setup",
+        "database/data-models",
+        "database/queries"
+      ]
+    },
+    {
+      "group": "Development",
+      "pages": [
+        "development/windsurf-claude"
+      ]
+    },
+    {
+      "group": "API Reference",
+      "pages": [
+        "api-reference/introduction", 
+        "api-reference/authentication", 
+        "api-reference/endpoints"
       ]
     }
   ],
   "footerSocials": {
-    "x": "https://x.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "x": "https://x.com/leadrun",
+    "github": "https://github.com/leadrun",
+    "linkedin": "https://www.linkedin.com/company/leadrun"
   }
 }

@@ -1,0 +1,148 @@
+---
+title: 'Kurulum'
+description: 'LeadRun platformunu kurma ve çalıştırma'
+icon: 'download'
+---
+
+# LeadRun Kurulumu
+
+Bu rehber, LeadRun platformunu yerel geliştirme ortamınıza kurmanız için gereken adımları içerir.
+
+## Gereksinimler
+
+LeadRun'ı çalıştırmak için aşağıdaki yazılımlara ihtiyacınız vardır:
+
+- Node.js 18 veya üzeri
+- Python 3.9 veya üzeri
+- MongoDB
+- Git
+
+## Kurulum Adımları
+
+<Steps>
+  <Step title="Repo'yu Klonlama">
+    İlk olarak, LeadRun repo'sunu yerel makinenize klonlayın:
+    
+    ```bash
+    git clone https://github.com/kullaniciadi/leadrun-clerk-next.git
+    cd leadrun-clerk-next
+    ```
+  </Step>
+  
+  <Step title="Frontend Bağımlılıklarını Yükleme">
+    Next.js uygulaması için gerekli bağımlılıkları yükleyin:
+    
+    <CodeGroup>
+      ```bash npm
+      npm install
+      ```
+      
+      ```bash yarn
+      yarn install
+      ```
+      
+      ```bash pnpm
+      pnpm install
+      ```
+    </CodeGroup>
+  </Step>
+  
+  <Step title="Backend Bağımlılıklarını Yükleme">
+    FastAPI backend'i için gerekli Python bağımlılıklarını yükleyin:
+    
+    ```bash
+    cd api
+    pip install -r requirements.txt
+    cd ..
+    ```
+  </Step>
+  
+  <Step title="Ortam Değişkenlerini Ayarlama">
+    Projenin kök dizininde `.env` dosyası oluşturun ve aşağıdaki değişkenleri ekleyin:
+    
+    ```plaintext .env
+    # MongoDB
+    MONGODB_URI=mongodb://localhost:27017/leadrun
+    
+    # API Anahtarları
+    OPENROUTER_API_KEY=your_openrouter_api_key
+    BRAVESEARCH_API_KEY=your_bravesearch_api_key
+    RAPIDAPI_KEY=your_rapidapi_key
+    
+    # Clerk Kimlik Doğrulama
+    CLERK_SECRET_KEY=your_clerk_secret_key
+    CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+    
+    # Stripe Ödeme
+    STRIPE_SECRET_KEY=your_stripe_secret_key
+    STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+    STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+    ```
+    
+    <Note>
+      API anahtarlarını ilgili servis sağlayıcılarından almanız gerekir. Daha fazla bilgi için [Yapılandırma](/getting-started/configuration) sayfasına bakın.
+    </Note>
+  </Step>
+</Steps>
+
+## Uygulamayı Çalıştırma
+
+Kurulum tamamlandıktan sonra, uygulamayı aşağıdaki komutla çalıştırabilirsiniz:
+
+<CodeGroup>
+  ```bash npm
+  npm run dev
+  ```
+  
+  ```bash yarn
+  yarn dev
+  ```
+  
+  ```bash pnpm
+  pnpm dev
+  ```
+</CodeGroup>
+
+Bu komut, hem Next.js frontend'i hem de FastAPI backend'i eşzamanlı olarak başlatacaktır. Uygulama başarıyla çalıştığında:
+
+- Frontend: [http://localhost:3000](http://localhost:3000)
+- Backend API: [http://localhost:8000](http://localhost:8000)
+
+## Docker ile Kurulum
+
+LeadRun'ı Docker kullanarak da çalıştırabilirsiniz:
+
+```bash
+docker-compose up -d
+```
+
+Bu komut, frontend, backend ve MongoDB'yi içeren tüm servisleri başlatacaktır.
+
+## Sorun Giderme
+
+<Accordion title="MongoDB Bağlantı Hatası">
+  MongoDB bağlantı hatası alıyorsanız:
+  
+  1. MongoDB servisinin çalıştığından emin olun
+  2. `.env` dosyasındaki `MONGODB_URI` değerinin doğru olduğunu kontrol edin
+  3. MongoDB'nin varsayılan port (27017) üzerinde çalıştığını doğrulayın
+</Accordion>
+
+<Accordion title="API Anahtarı Hataları">
+  API anahtarı hataları alıyorsanız:
+  
+  1. İlgili API anahtarlarının doğru olduğunu kontrol edin
+  2. API servis sağlayıcılarının erişilebilir olduğunu doğrulayın
+  3. API kullanım limitlerini kontrol edin
+</Accordion>
+
+<Accordion title="Port Çakışmaları">
+  Port çakışması yaşıyorsanız:
+  
+  1. 3000 ve 8000 portlarının başka uygulamalar tarafından kullanılmadığından emin olun
+  2. Gerekirse, `.env` dosyasında `PORT` değişkenini değiştirerek farklı portlar kullanabilirsiniz
+</Accordion>
+
+## Sonraki Adımlar
+
+Kurulum tamamlandıktan sonra, [Hızlı Başlangıç](/getting-started/quickstart) rehberini takip ederek LeadRun'ı kullanmaya başlayabilirsiniz.

@@ -1,0 +1,194 @@
+---
+title: 'Hızlı Başlangıç'
+description: 'LeadRun platformunu hızlıca kullanmaya başlama'
+icon: 'bolt'
+---
+
+# Hızlı Başlangıç
+
+Bu rehber, LeadRun platformunu kurulumdan sonra hızlıca kullanmaya başlamanız için gereken temel adımları içerir.
+
+## Giriş Yapma
+
+1. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine gidin (veya uygulamanızın yayınlandığı URL'yi kullanın)
+2. Clerk kimlik doğrulama sistemi üzerinden giriş yapın veya yeni bir hesap oluşturun
+3. Giriş yaptıktan sonra, LeadRun dashboard'una yönlendirileceksiniz
+
+## İlk Anahtar Kelime Koleksiyonu Oluşturma
+
+<Steps>
+  <Step title="Anahtar Kelime Oluşturma Sayfasına Gitme">
+    Dashboard'dan "Anahtar Kelime Oluştur" butonuna tıklayın veya direkt olarak [http://localhost:3000/keywords/create](http://localhost:3000/keywords/create) adresine gidin.
+  </Step>
+  
+  <Step title="Şirket Bilgilerini Girme">
+    Anahtar kelime üretimi için şirket bilgilerini girin:
+    
+    - **Şirket Adı**: Şirketinizin adı
+    - **Sektör**: Şirketinizin faaliyet gösterdiği sektör
+    - **Ürünler/Hizmetler**: Şirketinizin sunduğu ürün veya hizmetler
+    - **Hedef Kitle**: Hedeflediğiniz müşteri profili
+    - **Rakipler** (opsiyonel): Rakip şirketlerin adları
+    
+    <Tip>
+      Daha spesifik ve detaylı bilgiler girmeniz, daha alakalı anahtar kelimeler üretilmesini sağlar.
+    </Tip>
+  </Step>
+  
+  <Step title="Anahtar Kelime Üretimi">
+    "Anahtar Kelime Oluştur" butonuna tıklayın ve yapay zeka modelinin anahtar kelimeleri üretmesini bekleyin. Bu işlem, modelin yoğunluğuna bağlı olarak 10-30 saniye sürebilir.
+    
+    <Note>
+      Her sorguda tam olarak 60 adet benzersiz anahtar kelime üretilir.
+    </Note>
+  </Step>
+  
+  <Step title="Sonuçları İnceleme">
+    Üretilen anahtar kelimeler, aşağıdaki metriklerle birlikte listelenir:
+    
+    - **Arama Hacmi**: Tahmini aylık arama sayısı
+    - **Rekabet**: Rekabet seviyesi (0-100)
+    - **Tıklama Başına Maliyet**: Tahmini reklam maliyeti
+    - **Dönüşüm Potansiyeli**: Tahmini dönüşüm oranı (0-100)
+    
+    Anahtar kelimeler otomatik olarak MongoDB'ye kaydedilir ve daha sonra kullanılmak üzere saklanır.
+  </Step>
+</Steps>
+
+## Tweet Arama ve Analiz
+
+<Steps>
+  <Step title="Tweet Arama Sayfasına Gitme">
+    Dashboard'dan "Tweet Ara" butonuna tıklayın veya direkt olarak [http://localhost:3000/tweets/search](http://localhost:3000/tweets/search) adresine gidin.
+  </Step>
+  
+  <Step title="Anahtar Kelime Koleksiyonu Seçme">
+    Daha önce oluşturduğunuz anahtar kelime koleksiyonlarından birini seçin. Koleksiyonlar, oluşturulma tarihine göre sıralanır ve en yeniler en üstte gösterilir.
+  </Step>
+  
+  <Step title="API Seçimi">
+    Tweet aramak için kullanmak istediğiniz API'yi seçin:
+    
+    - **Brave Search API**: Varsayılan ve önerilen seçenek
+    - **RapidAPI Twitter**: Alternatif seçenek
+    
+    <Tip>
+      Her iki API de tam işlevseldir, ancak farklı sonuçlar dönebilir. İhtiyacınıza göre birini seçebilirsiniz.
+    </Tip>
+  </Step>
+  
+  <Step title="Dil Seçimi">
+    Aramak istediğiniz dili seçin:
+    
+    - **Türkçe**: Türkçe tweet'leri arar
+    - **İngilizce**: İngilizce tweet'leri arar
+  </Step>
+  
+  <Step title="Arama Başlatma">
+    "Tüm Anahtar Kelimeleri Ara" butonuna tıklayarak toplu arama başlatın. Bu işlem, seçilen anahtar kelime sayısına bağlı olarak birkaç dakika sürebilir.
+    
+    <Note>
+      Arama işlemi, her anahtar kelime için 10 saniye aralıklarla gerçekleştirilir.
+    </Note>
+  </Step>
+  
+  <Step title="Sonuçları İnceleme">
+    Arama tamamlandığında, bulunan tweet'ler üç sütunlu bir düzende gösterilir:
+    
+    - **Sol Sütun**: Anahtar kelimeler
+    - **Orta Sütun**: Seçilen anahtar kelimeye ait tweet'ler
+    - **Sağ Sütun**: Seçilen tweet'in detayları ve analiz sonuçları
+  </Step>
+</Steps>
+
+## Tweet Uyumluluk Analizi
+
+<Steps>
+  <Step title="Tweet Analiz Sayfasına Gitme">
+    Tweet arama sonuçları sayfasında "Tweet'leri Analiz Et" butonuna tıklayın veya direkt olarak [http://localhost:3000/tweets/analyze](http://localhost:3000/tweets/analyze) adresine gidin.
+  </Step>
+  
+  <Step title="Analiz Edilecek Tweet'leri Seçme">
+    Analiz etmek istediğiniz tweet'leri seçin:
+    
+    - **Tüm Tweet'leri Analiz Et**: Tüm tweet'leri analiz eder
+    - **Sadece Analiz Edilmemiş Tweet'leri Analiz Et**: Daha önce analiz edilmemiş tweet'leri analiz eder
+  </Step>
+  
+  <Step title="Analizi Başlatma">
+    "Analizi Başlat" butonuna tıklayarak tweet uyumluluk analizini başlatın. Bu işlem, tweet sayısına bağlı olarak birkaç dakika sürebilir.
+    
+    <Note>
+      Analiz sırasında gerçek zamanlı ilerleme takibi yapabilir ve başarılı/başarısız analiz sayılarını görebilirsiniz.
+    </Note>
+  </Step>
+  
+  <Step title="Analiz Sonuçlarını İnceleme">
+    Analiz tamamlandığında, her tweet için:
+    
+    - **Uyumluluk Puanı**: 0-100 arasında bir puan
+    - **Açıklama**: Puanın nedenleri hakkında detaylı açıklama
+    - **Uyumluluk Durumu**: Uyumlu/Uyumsuz olarak sınıflandırma
+    
+    Tweet'leri uyumluluk durumuna göre filtreleyebilirsiniz.
+  </Step>
+</Steps>
+
+## Tweet Yanıtlama
+
+<Steps>
+  <Step title="Yanıtlanacak Tweet'i Seçme">
+    Analiz edilmiş tweet'ler arasından yanıtlamak istediğiniz tweet'i seçin ve "Yanıt Oluştur" butonuna tıklayın.
+  </Step>
+  
+  <Step title="Yanıt Önerilerini İnceleme">
+    Yapay zeka modeli, seçilen tweet için 3 farklı yanıt önerisi oluşturacaktır. Her öneri:
+    
+    - Twitter'ın 280 karakter sınırına uygun
+    - Şirket ve müşteri bilgilerine göre özelleştirilmiş
+    - Profesyonel ve ilgi çekici
+  </Step>
+  
+  <Step title="Yanıt Seçme ve Gönderme">
+    Önerilen yanıtlar arasından birini seçin veya düzenleyin, ardından "Yanıtı Gönder" butonuna tıklayın.
+    
+    <Note>
+      Şu anda, yanıtlar doğrudan Twitter'a gönderilmemektedir. Bu özellik, Twitter API entegrasyonu tamamlandığında kullanılabilir olacaktır.
+    </Note>
+  </Step>
+</Steps>
+
+## Sonraki Adımlar
+
+Temel işlevleri öğrendikten sonra, aşağıdaki konuları inceleyebilirsiniz:
+
+<CardGroup cols={2}>
+  <Card
+    title="Yapılandırma"
+    icon="gear"
+    href="/getting-started/configuration"
+  >
+    API anahtarları ve diğer ayarları yapılandırma
+  </Card>
+  <Card
+    title="Özellikler"
+    icon="star"
+    href="/features/keyword-generation"
+  >
+    Tüm özelliklerin detaylı açıklamaları
+  </Card>
+  <Card
+    title="Teknik Dokümantasyon"
+    icon="code"
+    href="/technical/architecture"
+  >
+    Sistem mimarisi ve teknik detaylar
+  </Card>
+  <Card
+    title="API Referansı"
+    icon="brackets-curly"
+    href="/api-reference/introduction"
+  >
+    API endpoint'leri ve kullanımları
+  </Card>
+</CardGroup>
