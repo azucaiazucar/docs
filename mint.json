@@ -17,13 +17,13 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:support@leadrun.com"
+      "name": "info@leadrun.com",
+      "url": "mailto:info@leadrun.com"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://app.leadrun.com"
+    "name": "Leadrun",
+    "url": "https://leadrun.com"
   },
   "tabs": [
     {
@@ -33,14 +33,9 @@
   ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "introduction"
-    },
-    {
-      "name": "API",
-      "icon": "code",
-      "url": "api-reference"
+        "name": "API",
+        "icon": "code",
+        "url": "api-reference"
     }
   ],
   "navigation": [
@@ -51,7 +46,7 @@
     {
       "group": "Getting Started",
       "pages": [
-        "getting-started/installation", 
+        "getting-started/leadrun-uyelik", 
         "getting-started/quickstart", 
         "getting-started/configuration"
       ]
@@ -106,8 +101,7 @@
     {
       "group": "API Reference",
       "pages": [
-        "api-reference/introduction", 
-        "api-reference/authentication", 
+        "api-reference/authentication",
         "api-reference/endpoints"
       ]
     }

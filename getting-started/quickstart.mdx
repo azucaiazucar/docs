@@ -1,28 +1,34 @@
 ---
-title: 'Hızlı Başlangıç'
-description: 'LeadRun platformunu hızlıca kullanmaya başlama'
+title: 'Hızlı Başlangıç / Quickstart'
+description: 'LeadRun platformunu hızlıca kullanmaya başlama rehberi / Guide to quickly start using the LeadRun platform'
 icon: 'bolt'
 ---
 
-# Hızlı Başlangıç
+# Hızlı Başlangıç (Türkçe)
 
-Bu rehber, LeadRun platformunu kurulumdan sonra hızlıca kullanmaya başlamanız için gereken temel adımları içerir.
+LeadRun'a üye olduktan sonra, platformun temel özelliklerini hızlıca kullanmaya başlamak için bu rehberi takip edebilirsiniz. Aşağıdaki adımlar, dashboard üzerinden LeadRun'ın ana işlevlerini nasıl kullanacağınızı gösterir.
 
-## Giriş Yapma
+## LeadRun Dashboard'una Giriş
 
-1. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine gidin (veya uygulamanızın yayınlandığı URL'yi kullanın)
-2. Clerk kimlik doğrulama sistemi üzerinden giriş yapın veya yeni bir hesap oluşturun
-3. Giriş yaptıktan sonra, LeadRun dashboard'una yönlendirileceksiniz
+LeadRun'ı kullanmaya başlamak için öncelikle hesabınıza giriş yapın:
+
+    1. [www.leadrun.co](https://www.leadrun.co) adresine gidin.
+2. E-posta adresiniz ve şifrenizle giriş yapın.
+3. Giriş yaptıktan sonra, LeadRun dashboard'una yönlendirileceksiniz.
+
+<Note>
+Eğer henüz bir hesabınız yoksa, [LeadRun Üyelik](/getting-started/leadrun-uyelik) sayfamızdan kayıt olabilirsiniz.
+</Note>
 
 ## İlk Anahtar Kelime Koleksiyonu Oluşturma
 
 <Steps>
   <Step title="Anahtar Kelime Oluşturma Sayfasına Gitme">
-    Dashboard'dan "Anahtar Kelime Oluştur" butonuna tıklayın veya direkt olarak [http://localhost:3000/keywords/create](http://localhost:3000/keywords/create) adresine gidin.
+    Dashboard'dan "Anahtar Kelime Oluştur" seçeneğine tıklayın.
   </Step>
   
   <Step title="Şirket Bilgilerini Girme">
-    Anahtar kelime üretimi için şirket bilgilerini girin:
+    Anahtar kelime üretimi için şirket bilgilerinizi girin:
     
     - **Şirket Adı**: Şirketinizin adı
     - **Sektör**: Şirketinizin faaliyet gösterdiği sektör
@@ -36,7 +42,7 @@ Bu rehber, LeadRun platformunu kurulumdan sonra hızlıca kullanmaya başlamanı
   </Step>
   
   <Step title="Anahtar Kelime Üretimi">
-    "Anahtar Kelime Oluştur" butonuna tıklayın ve yapay zeka modelinin anahtar kelimeleri üretmesini bekleyin. Bu işlem, modelin yoğunluğuna bağlı olarak 10-30 saniye sürebilir.
+    "Anahtar Kelime Oluştur" butonuna tıklayın ve yapay zeka modelinin anahtar kelimeleri üretmesini bekleyin. Bu işlem birkaç saniye sürebilir.
     
     <Note>
       Her sorguda tam olarak 60 adet benzersiz anahtar kelime üretilir.
@@ -51,7 +57,7 @@ Bu rehber, LeadRun platformunu kurulumdan sonra hızlıca kullanmaya başlamanı
     - **Tıklama Başına Maliyet**: Tahmini reklam maliyeti
     - **Dönüşüm Potansiyeli**: Tahmini dönüşüm oranı (0-100)
     
-    Anahtar kelimeler otomatik olarak MongoDB'ye kaydedilir ve daha sonra kullanılmak üzere saklanır.
+    Anahtar kelimeler otomatik olarak hesabınıza kaydedilir ve daha sonra kullanılmak üzere saklanır.
   </Step>
 </Steps>
 
@@ -59,45 +65,34 @@ Bu rehber, LeadRun platformunu kurulumdan sonra hızlıca kullanmaya başlamanı
 
 <Steps>
   <Step title="Tweet Arama Sayfasına Gitme">
-    Dashboard'dan "Tweet Ara" butonuna tıklayın veya direkt olarak [http://localhost:3000/tweets/search](http://localhost:3000/tweets/search) adresine gidin.
+    Dashboard'dan "Tweet Ara" seçeneğine tıklayın.
   </Step>
   
   <Step title="Anahtar Kelime Koleksiyonu Seçme">
     Daha önce oluşturduğunuz anahtar kelime koleksiyonlarından birini seçin. Koleksiyonlar, oluşturulma tarihine göre sıralanır ve en yeniler en üstte gösterilir.
   </Step>
   
-  <Step title="API Seçimi">
-    Tweet aramak için kullanmak istediğiniz API'yi seçin:
+  <Step title="Arama Ayarlarını Belirleme">
+    Tweet aramak için dil ve diğer filtreleri seçebilirsiniz:
     
-    - **Brave Search API**: Varsayılan ve önerilen seçenek
-    - **RapidAPI Twitter**: Alternatif seçenek
+    - **Dil Seçimi**: Türkçe veya İngilizce tweet'leri arayabilirsiniz.
+    - **Diğer Filtreler**: İhtiyacınıza göre ek filtreler uygulayabilirsiniz.
     
     <Tip>
-      Her iki API de tam işlevseldir, ancak farklı sonuçlar dönebilir. İhtiyacınıza göre birini seçebilirsiniz.
+      Farklı dil seçeneklerini deneyerek hedef kitlenize en uygun tweet'leri bulabilirsiniz.
     </Tip>
-  </Step>
-  
-  <Step title="Dil Seçimi">
-    Aramak istediğiniz dili seçin:
-    
-    - **Türkçe**: Türkçe tweet'leri arar
-    - **İngilizce**: İngilizce tweet'leri arar
   </Step>
   
   <Step title="Arama Başlatma">
     "Tüm Anahtar Kelimeleri Ara" butonuna tıklayarak toplu arama başlatın. Bu işlem, seçilen anahtar kelime sayısına bağlı olarak birkaç dakika sürebilir.
     
     <Note>
-      Arama işlemi, her anahtar kelime için 10 saniye aralıklarla gerçekleştirilir.
+      Arama işlemi sırasında ilerlemeyi dashboard üzerinden takip edebilirsiniz.
     </Note>
   </Step>
   
   <Step title="Sonuçları İnceleme">
-    Arama tamamlandığında, bulunan tweet'ler üç sütunlu bir düzende gösterilir:
-    
-    - **Sol Sütun**: Anahtar kelimeler
-    - **Orta Sütun**: Seçilen anahtar kelimeye ait tweet'ler
-    - **Sağ Sütun**: Seçilen tweet'in detayları ve analiz sonuçları
+    Arama tamamlandığında, bulunan tweet'ler düzenli bir şekilde gösterilir. Tweet'leri inceleyebilir ve detaylarını görüntüleyebilirsiniz.
   </Step>
 </Steps>
 
@@ -105,21 +100,21 @@ Bu rehber, LeadRun platformunu kurulumdan sonra hızlıca kullanmaya başlamanı
 
 <Steps>
   <Step title="Tweet Analiz Sayfasına Gitme">
-    Tweet arama sonuçları sayfasında "Tweet'leri Analiz Et" butonuna tıklayın veya direkt olarak [http://localhost:3000/tweets/analyze](http://localhost:3000/tweets/analyze) adresine gidin.
+    Tweet arama sonuçları sayfasında "Tweet'leri Analiz Et" seçeneğine tıklayın.
   </Step>
   
   <Step title="Analiz Edilecek Tweet'leri Seçme">
-    Analiz etmek istediğiniz tweet'leri seçin:
+    Analiz etmek istediğiniz tweet'leri belirleyin:
     
-    - **Tüm Tweet'leri Analiz Et**: Tüm tweet'leri analiz eder
-    - **Sadece Analiz Edilmemiş Tweet'leri Analiz Et**: Daha önce analiz edilmemiş tweet'leri analiz eder
+    - **Tüm Tweet'leri Analiz Et**: Tüm tweet'leri analiz eder.
+    - **Sadece Analiz Edilmemiş Tweet'leri Analiz Et**: Daha önce analiz edilmemiş tweet'leri analiz eder.
   </Step>
   
   <Step title="Analizi Başlatma">
     "Analizi Başlat" butonuna tıklayarak tweet uyumluluk analizini başlatın. Bu işlem, tweet sayısına bağlı olarak birkaç dakika sürebilir.
     
     <Note>
-      Analiz sırasında gerçek zamanlı ilerleme takibi yapabilir ve başarılı/başarısız analiz sayılarını görebilirsiniz.
+      Analiz sırasında gerçek zamanlı ilerleme takibi yapabilirsiniz.
     </Note>
   </Step>
   
@@ -142,9 +137,9 @@ Bu rehber, LeadRun platformunu kurulumdan sonra hızlıca kullanmaya başlamanı
   </Step>
   
   <Step title="Yanıt Önerilerini İnceleme">
-    Yapay zeka modeli, seçilen tweet için 3 farklı yanıt önerisi oluşturacaktır. Her öneri:
+    Yapay zeka modeli, seçilen tweet için farklı yanıt önerileri oluşturacaktır. Her öneri:
     
-    - Twitter'ın 280 karakter sınırına uygun
+    - Twitter'ın karakter sınırına uygun
     - Şirket ve müşteri bilgilerine göre özelleştirilmiş
     - Profesyonel ve ilgi çekici
   </Step>
@@ -153,7 +148,7 @@ Bu rehber, LeadRun platformunu kurulumdan sonra hızlıca kullanmaya başlamanı
     Önerilen yanıtlar arasından birini seçin veya düzenleyin, ardından "Yanıtı Gönder" butonuna tıklayın.
     
     <Note>
-      Şu anda, yanıtlar doğrudan Twitter'a gönderilmemektedir. Bu özellik, Twitter API entegrasyonu tamamlandığında kullanılabilir olacaktır.
+      Yanıt gönderme özelliği, Twitter entegrasyonu tamamlandığında tam olarak aktif olacaktır. Şu anda önerileri kopyalayıp manuel olarak gönderebilirsiniz.
     </Note>
   </Step>
 </Steps>
@@ -168,7 +163,7 @@ Temel işlevleri öğrendikten sonra, aşağıdaki konuları inceleyebilirsiniz:
     icon="gear"
     href="/getting-started/configuration"
   >
-    API anahtarları ve diğer ayarları yapılandırma
+    Hesap ayarlarınızı ve diğer tercihlerinizi yapılandırma
   </Card>
   <Card
     title="Özellikler"
@@ -177,18 +172,176 @@ Temel işlevleri öğrendikten sonra, aşağıdaki konuları inceleyebilirsiniz:
   >
     Tüm özelliklerin detaylı açıklamaları
   </Card>
+</CardGroup>
+
+---
+
+# Quickstart (English)
+
+After signing up for LeadRun, follow this guide to quickly start using the platform's core features. The steps below show you how to use LeadRun's main functions through the dashboard.
+
+## Logging Into LeadRun Dashboard
+
+To start using LeadRun, first log into your account:
+
+    1. Go to [www.leadrun.co](https://www.leadrun.co).
+2. Log in with your email address and password.
+3. After logging in, you will be redirected to the LeadRun dashboard.
+
+<Note>
+If you don't have an account yet, you can sign up via our [LeadRun Membership](/getting-started/leadrun-uyelik) page.
+</Note>
+
+## Creating Your First Keyword Collection
+
+<Steps>
+  <Step title="Navigating to Keyword Creation Page">
+    From the dashboard, click on the "Create Keywords" option.
+  </Step>
+  
+  <Step title="Entering Company Information">
+    Enter your company details for keyword generation:
+    
+    - **Company Name**: Your company's name
+    - **Industry**: The industry your company operates in
+    - **Products/Services**: The products or services your company offers
+    - **Target Audience**: The customer profile you are targeting
+    - **Competitors** (optional): Names of competitor companies
+    
+    <Tip>
+      Providing more specific and detailed information helps generate more relevant keywords.
+    </Tip>
+  </Step>
+  
+  <Step title="Generating Keywords">
+    Click the "Create Keywords" button and wait for the AI model to generate the keywords. This process may take a few seconds.
+    
+    <Note>
+      Each query generates exactly 60 unique keywords.
+    </Note>
+  </Step>
+  
+  <Step title="Reviewing Results">
+    The generated keywords are listed along with the following metrics:
+    
+    - **Search Volume**: Estimated monthly search count
+    - **Competition**: Competition level (0-100)
+    - **Cost Per Click**: Estimated advertising cost
+    - **Conversion Potential**: Estimated conversion rate (0-100)
+    
+    Keywords are automatically saved to your account for later use.
+  </Step>
+</Steps>
+
+## Tweet Search and Analysis
+
+<Steps>
+  <Step title="Navigating to Tweet Search Page">
+    From the dashboard, click on the "Search Tweets" option.
+  </Step>
+  
+  <Step title="Selecting a Keyword Collection">
+    Choose one of the keyword collections you previously created. Collections are sorted by creation date, with the newest at the top.
+  </Step>
+  
+  <Step title="Setting Search Preferences">
+    Select the language and other filters for tweet search:
+    
+    - **Language Selection**: Search for tweets in Turkish or English.
+    - **Other Filters**: Apply additional filters based on your needs.
+    
+    <Tip>
+      Experiment with different language options to find tweets most relevant to your target audience.
+    </Tip>
+  </Step>
+  
+  <Step title="Starting the Search">
+    Click the "Search All Keywords" button to start a bulk search. This process may take a few minutes depending on the number of keywords selected.
+    
+    <Note>
+      You can track the progress of the search directly on the dashboard.
+    </Note>
+  </Step>
+  
+  <Step title="Reviewing Results">
+    Once the search is complete, the found tweets are displayed in an organized layout. You can review the tweets and view their details.
+  </Step>
+</Steps>
+
+## Tweet Compatibility Analysis
+
+<Steps>
+  <Step title="Navigating to Tweet Analysis Page">
+    On the tweet search results page, click the "Analyze Tweets" option.
+  </Step>
+  
+  <Step title="Selecting Tweets for Analysis">
+    Choose the tweets you want to analyze:
+    
+    - **Analyze All Tweets**: Analyzes all tweets.
+    - **Analyze Only Unanalyzed Tweets**: Analyzes tweets that haven't been analyzed yet.
+  </Step>
+  
+  <Step title="Starting the Analysis">
+    Click the "Start Analysis" button to begin the tweet compatibility analysis. This process may take a few minutes depending on the number of tweets.
+    
+    <Note>
+      You can track real-time progress during the analysis.
+    </Note>
+  </Step>
+  
+  <Step title="Reviewing Analysis Results">
+    Once the analysis is complete, for each tweet you will see:
+    
+    - **Compatibility Score**: A score between 0-100
+    - **Explanation**: Detailed reasons for the score
+    - **Compatibility Status**: Classified as Compatible/Incompatible
+    
+    You can filter tweets based on their compatibility status.
+  </Step>
+</Steps>
+
+## Responding to Tweets
+
+<Steps>
+  <Step title="Selecting a Tweet to Respond To">
+    From the analyzed tweets, select the tweet you want to respond to and click the "Create Response" button.
+  </Step>
+  
+  <Step title="Reviewing Response Suggestions">
+    The AI model will generate different response suggestions for the selected tweet. Each suggestion is:
+    
+    - Compliant with Twitter's character limit
+    - Customized based on company and customer information
+    - Professional and engaging
+  </Step>
+  
+  <Step title="Selecting and Sending a Response">
+    Choose one of the suggested responses or edit it, then click the "Send Response" button.
+    
+    <Note>
+      The response sending feature will be fully active once Twitter integration is complete. For now, you can copy the suggestions and send them manually.
+    </Note>
+  </Step>
+</Steps>
+
+## Next Steps
+
+After learning the basic functions, you can explore the following topics:
+
+<CardGroup cols={2}>
   <Card
-    title="Teknik Dokümantasyon"
-    icon="code"
-    href="/technical/architecture"
+    title="Configuration"
+    icon="gear"
+    href="/getting-started/configuration"
   >
-    Sistem mimarisi ve teknik detaylar
+    Configuring your account settings and other preferences
   </Card>
   <Card
-    title="API Referansı"
-    icon="brackets-curly"
-    href="/api-reference/introduction"
+    title="Features"
+    icon="star"
+    href="/features/keyword-generation"
   >
-    API endpoint'leri ve kullanımları
+    Detailed explanations of all features
   </Card>
 </CardGroup>
