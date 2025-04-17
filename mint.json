@@ -53,9 +53,13 @@
   "navigation": [
     {
       "group": "Main",
-      "pages": [
-        "index"
-      ]
+"pages": [
+  "index",
+  "teknoloji-altyapisi",
+  "sistem-mimarisi",
+  "ozellikler",
+  "gelistirme"
+]
     }
   ]
 }
