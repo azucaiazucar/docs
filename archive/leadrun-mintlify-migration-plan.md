@@ -177,12 +177,12 @@ Example:
   npm run dev
   ```
   
+<CodeGroup>
   ```bash yarn
   yarn install
   yarn dev
   ```
 </CodeGroup>
-```
 
 #### API Documentation
 - Create OpenAPI specification file for the LeadRun API

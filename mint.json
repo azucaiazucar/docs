@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "LeadRun Docs",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/logo_dark.svg",
+    "light": "/logo/logo.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -17,13 +17,20 @@
   },
   "topbarLinks": [
     {
-      "name": "info@leadrun.com",
-      "url": "mailto:info@leadrun.com"
+      "name": "Contact",
+      "url": "mailto:info@leadrun.com",
+      "type": "link"
+    },
+    {
+      "name": "Archive",
+      "url": "archive/archive",
+      "type": "link"
     }
   ],
   "topbarCtaButton": {
-    "name": "Leadrun",
-    "url": "https://leadrun.com"
+    "name": "Visit LeadRun",
+    "url": "https://leadrun.com",
+    "type": "link"
   },
   "tabs": [
     {
@@ -33,82 +40,22 @@
   ],
   "anchors": [
     {
-        "name": "API",
-        "icon": "code",
-        "url": "api-reference"
-    }
-  ],
-  "navigation": [
-    {
-      "group": "Introduction",
-      "pages": ["introduction"]
-    },
-    {
-      "group": "Getting Started",
-      "pages": [
-        "getting-started/leadrun-uyelik", 
-        "getting-started/quickstart", 
-        "getting-started/configuration"
-      ]
-    },
-    {
-      "group": "Features",
-      "pages": [
-        "features/keyword-generation",
-        "features/tweet-search",
-        "features/compatibility-analysis",
-        "features/response-generation"
-      ]
-    },
-    {
-      "group": "Technical Documentation",
-      "pages": [
-        "technical/architecture",
-        "technical/data-models",
-        "technical/api-integrations",
-        "technical/database"
-      ]
-    },
-    {
-      "group": "Integrations",
-      "pages": [
-        "integrations/stripe-payments",
-        "integrations/rapidapi-twitter",
-        "integrations/openrouter-llm"
-      ]
-    },
-    {
-      "group": "Deployment",
-      "pages": [
-        "deployment/railway-nextjs",
-        "deployment/railway-n8n"
-      ]
-    },
-    {
-      "group": "Database",
-      "pages": [
-        "database/mongodb-setup",
-        "database/data-models",
-        "database/queries"
-      ]
-    },
-    {
-      "group": "Development",
-      "pages": [
-        "development/windsurf-claude"
-      ]
-    },
-    {
-      "group": "API Reference",
-      "pages": [
-        "api-reference/authentication",
-        "api-reference/endpoints"
-      ]
+      "name": "API",
+      "icon": "code",
+      "url": "api-reference"
     }
   ],
   "footerSocials": {
     "x": "https://x.com/leadrun",
     "github": "https://github.com/leadrun",
     "linkedin": "https://www.linkedin.com/company/leadrun"
-  }
+  },
+  "navigation": [
+    {
+      "group": "Main",
+      "pages": [
+        "index"
+      ]
+    }
+  ]
 }
